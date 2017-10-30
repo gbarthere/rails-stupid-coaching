@@ -1,0 +1,15 @@
+
+<h3><%= @question %></h3>
+<h3>You</h3>
+
+<h3>
+  <% if @question.include? "?" %>
+    <%= @silly %>
+  <% elsif @question == "Let's work" %>
+    <%= @work %>
+  <% else %>
+    <%= @dont_care %>
+  <% end %>
+</h3>
+<h3>Your Coach</h3>
+<%= link_to "Ask a new question", ask_path %>
